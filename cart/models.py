@@ -1,16 +1,16 @@
 from django.db import models
 
+
 # Create your models here.
+
 class OrderInfo(models.Model):
     """订单信息模型"""
-
     status = (
         (1, '待付款'),
         (2, '待发货'),
         (3, '待收货'),
         (4, '已完成'),
     )
-
     # 订单编号
     order_id = models.CharField(max_length=100)
     # 收货地址
@@ -29,7 +29,6 @@ class OrderInfo(models.Model):
 
 class OrderGoods(models.Model):
     """订单商品模型"""
-
     # 所属商品
     goods_info = models.ForeignKey('goods.GoodsInfo')
     # 商品数量

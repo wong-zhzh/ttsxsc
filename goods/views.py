@@ -4,14 +4,14 @@ from django.shortcuts import render
 # Create your views here.
 # 视图就是一个函数
 # 必须传一个请求 request 请求对象 里面有用户发送的请求信息 比如一个url地址和其他数据
-from goods.models import GoodCategory, GoodsInfo
+from goods.models import GoodsCategory, GoodsInfo
 
 '''首页视图函数'''
 
 
 def index(request):
     # 1 查询商品分类
-    categories = GoodCategory.objects.all()
+    categories = GoodsCategory.objects.all()
     # 2 从每个分类中获取4个商品 （获取每一类最后四个最新商品）
     for cag in categories:
         # goodinfo= GoodsInfo.objects.filter(goods_cag=)
@@ -47,7 +47,7 @@ def index(request):
 
 def detail(request):
     # 商品分类
-    cactegory = GoodCategory.objects.all()
+    cactegory = GoodsCategory.objects.all()
     # 购物车数据
     # 所有的购物车商品
     cartgoods_list = []
