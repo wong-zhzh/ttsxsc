@@ -17,7 +17,7 @@ def add_cart(request):
             goods_count = int(goods_count) +1
         # 如果之前没有那么就添加一个
         else:
-            goods_count = 2
+            goods_count = 1
         # 把商品id保存到cookie
         respones.set_cookie(goods_id, goods_count)
 
