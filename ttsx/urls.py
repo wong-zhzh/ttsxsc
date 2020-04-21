@@ -2,6 +2,7 @@ from cart.views import add_cart
 from django.conf.urls import url
 from django.contrib import admin
 from goods.views import index, detail
+from login.views import login, register
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
@@ -9,4 +10,6 @@ urlpatterns = [
     url(r'^index/$', index),#主页
     url(r'^detail/$', detail),#详情页
     url(r'^cart/add_cart/$', add_cart),
+    url(r'^login/$', login),#登录页面
+    url(r'^register/$',register)#注册页面
 ]
